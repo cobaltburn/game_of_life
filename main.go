@@ -108,6 +108,7 @@ func startWorld() (world [][]rune) {
 		fmt.Printf("The input size is invalid\n")
 		os.Exit(0)
 	}
+	rand.Seed(time.Now().UnixNano())
 	world = emptyGrid(size)
 	for i := range world {
 		for j := range world[i] {
